@@ -1,0 +1,131 @@
+import numpy as np
+#nasil dizi olusturulur?
+X = np.array([1,2,3,4,5,6,7,8,9])
+print(X)
+
+print(type(X)) #olusturulan X'in tipi nedir (numpy dizisi)
+
+print(X.shape) #X arrayinin eksen bazinda boyutu (9 satir 1 sutun)
+
+print(X.size) #toplam eleman sayisini verir
+
+print(X.ndim) #boyut sayisi
+
+print(X.dtype) #X arrayindeki verilerin tipi nedir
+
+
+Y = np.array([[1,2,3], [4,5,6]])
+
+print(Y)
+
+print(type(Y))
+
+print(Y.shape)
+
+print(Y.size)
+
+print(Y.ndim)
+
+print(Y.dtype)
+
+
+X1 = np.zeros(5)
+print(X1)
+
+X12 = np.zeros((3,4))
+print(X12)
+
+X2 = np.zeros((2,4,5))
+print(X2)
+
+X3 = np.ones(9)
+print(X3)
+
+X4 = np.full((3,4), 7)
+print(X4)
+
+X5 = np.empty((3,3))
+print(X5)
+
+
+import numpy as np
+X6 = np.eye(5) #birim matris
+print(X6)
+
+X7 = np.identity(9) #birim matris
+print(X7)
+
+X8 = np.diag([59,67,7,35,48]) #diagonal matris
+print(X8)
+
+X9 = np.arange(11) #11'e kadar yazdirir
+print(X9)
+
+X10 = np.arange(35,49) #35'ten 49'a kadar git 49 dahil değil
+print(X10)
+
+X11 = np.arange(5, 35, 5) #5'ten 35'e kadar 5'er artış miktarıyla git
+print(X11)
+
+X12 = np.linspace(5, 20, 5) #5 ile 20 arasında 5 eleman olacak şekilde ilerle
+print(X12)
+
+X13 = np.linspace(5,45, 6, endpoint=False) #bitis noktasini dahil etme
+print(X13)
+
+X14 = np.arange(30)
+print(X14)
+
+X15 = np.reshape(X14, (5,6)) #verileri degistirmeden boyutu verilen parametrelere gore yeniden sekillendirir
+print(X15)
+
+X16 = np.arange(9)
+print(X16)
+print(X16[2]) #dizinin 2 indeksine sahip elemanı
+print(X16[-3]) #dizinin -3 indeksine sahip elemanı
+
+
+X17 = np.arange(8)
+print(X17)
+Y1 = np.delete(X17, [0,2])
+print(Y1) #0 ve 2 numaralı indekse sahip sutunlari sildik
+
+
+X18 = np.arange(16).reshape(4,4)
+print(X18)
+Y2 = np.delete(X18, 1, axis=0)
+print(Y2)
+
+X19 = np.arange(6)
+print(X19)
+X19 = np.append(X19, 6)
+print(X19)   #array'e 6'yi ekledik append ile
+
+
+X20 = np.arange(9).reshape(3,3)
+print(X20)
+X20 = np.append(X20, [[100,200,300]], axis=0)  #satir olarak ekleme yaptik
+print(X20)
+X20 = np.append(X20, [[10], [20], [30], [40]], axis=1)   #sutun olarak ekleme yaptik
+print(X20)
+
+
+X21 = np.arange(5)
+print(X21)
+X21 = np.insert(X21, 0, 59)
+print(X21)
+
+
+X22 = np.arange(3)
+print(X22)
+Y3 = np.arange(9).reshape(3,3)
+print(Y3)
+a = np.vstack((X22,Y3))  #vertical stack
+print(a)
+
+Y3 = Y3.reshape((9,))
+
+b = np.hstack((X22,Y3))   #horizontal stack
+print(b)
+
+
